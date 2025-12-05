@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mukesh Kumar Shah — Virtual Assistant & Data Management Specialist</title>
+  <meta name="description" content="Virtual Assistant, Data Entry, Web Scraping, Product Listing, Excel & Google Sheets automation services. Reliable, accurate, and prompt." />
+  <meta name="keywords" content="Virtual Assistant, Data Entry, Web Scraping, Product Listing, Excel, Google Sheets, Automation" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff; --fg:#0b1220; --muted:#6b7280; --accent:#2563eb; --card:#f8fafc;
+      --radius:12px; --glass: rgba(255,255,255,0.6);
+    }
+    [data-theme="dark"]{ --bg:#0b1220; --fg:#e6eef8; --muted:#9aa7b8; --accent:#3b82f6; --card:rgba(255,255,255,0.03); --glass: rgba(255,255,255,0.03); }
+    [data-theme="gradient"]{ --bg: linear-gradient(135deg,#ffecd2,#fcb69f); --fg:#0b1220; --muted:#4b5563; --accent:#ef4444; --card:rgba(255,255,255,0.8); }
+    [data-theme="oatly"]{ --bg:#fffaf0; --fg:#1f2937; --muted:#6b7280; --accent:#ef4444; --card:#fff; }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{font-family:Inter,system-ui,Arial; margin:0; background:var(--bg); color:var(--fg); -webkit-font-smoothing:antialiased;}
+    .container{max-width:1100px; margin:0 auto; padding:28px}
+    header{display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .brand{display:flex;align-items:center; gap:12px}
+    .avatar{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#eef2ff,#e0f2fe); display:flex;align-items:center;justify-content:center;font-weight:700}
+    .nav{display:flex; gap:12px; align-items:center}
+    .btn{padding:10px 14px;border-radius:10px;border:0; cursor:pointer;font-weight:600}
+    .btn-primary{background:var(--accent); color:#fff}
+    .btn-ghost{background:transparent; color:var(--fg); border:1px solid rgba(0,0,0,0.06)}
+    main{margin-top:28px}
+    .hero{display:grid; grid-template-columns:1fr 380px; gap:28px; align-items:center}
+    .hero .eyebrow{color:var(--muted); font-weight:600}
+    h1{font-size:32px; margin:8px 0}
+    p.lead{color:var(--muted); line-height:1.6}
+    .card{background:var(--card); padding:18px; border-radius:12px; box-shadow: 0 6px 18px rgba(12,15,20,0.04)}
+    .services{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:16px}
+    .service{padding:14px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.3));}
+    .portfolio-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
+    .portfolio-item{padding:12px;border-radius:10px;background:var(--card)}
+    footer{margin-top:40px;padding:18px 0;color:var(--muted); text-align:center}
+    /* responsive */
+    @media (max-width:900px){.hero{grid-template-columns:1fr;}.services{grid-template-columns:repeat(2,1fr)}.portfolio-grid{grid-template-columns:repeat(2,1fr)} }
+    @media (max-width:520px){.services{grid-template-columns:1fr}.portfolio-grid{grid-template-columns:1fr}.nav{display:none}.avatar{width:44px;height:44px}}
+    /* small utilities */
+    .flex{display:flex;gap:12px;align-items:center}
+    .price-grid{display:flex;gap:12px;flex-wrap:wrap}
+    .plan{flex:1; min-width:200px}
+    .review{border-left:3px solid rgba(0,0,0,0.06); padding-left:12px}
+    .faq-item{margin-bottom:12px}
+    .theme-switch{display:inline-flex; gap:8px; align-items:center}
+    .contact-form input,.contact-form textarea{width:100%;padding:10px;margin-bottom:8px;border-radius:8px;border:1px solid #e6e9ef}
+  </style>
+</head>
+<body data-theme="gradient">
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar">MK</div>
+        <div>
+          <div style="font-weight:700">Mukesh Kumar Shah</div>
+          <div style="font-size:12px;color:var(--muted)">Virtual Assistant • Data Entry • Excel & Automation</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a class="btn btn-ghost" href="#services">Services</a>
+        <a class="btn btn-ghost" href="#portfolio">Portfolio</a>
+        <a class="btn btn-ghost" href="#pricing">Pricing</a>
+        <a class="btn btn-ghost" href="#contact">Contact</a>
+        <div class="theme-switch card" style="display:flex;align-items:center">
+          <label style="font-size:13px;margin-right:8px;color:var(--muted)">Theme</label>
+          <select id="theme" style="padding:8px;border-radius:8px;border:1px solid #e6e9ef">
+            <option value="minimal">Minimal</option>
+            <option value="blue">Blue</option>
+            <option value="dark">Dark</option>
+            <option value="gradient" selected>Gradient</option>
+            <option value="oatly">Oatly-style</option>
+          </select>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div>
+          <div class="eyebrow">Reliable • Accurate • Fast</div>
+          <h1>I help businesses save time with reliable Virtual Assistance & data solutions</h1>
+          <p class="lead">I provide high-quality Virtual Assistance, Data Entry, Web Scraping, Product Listing, and Excel/Google Sheets automation so you can focus on growth. 100% client satisfaction and fast delivery.</p>
+          <div class="flex" style="margin-top:12px">
+            <a class="btn btn-primary" href="#contact">Hire Me</a>
+            <a class="btn btn-ghost" href="#portfolio">See Work</a>
+            <a class="btn" style="background:#111827;color:#fff" href="https://www.upwork.com/" target="_blank">Upwork</a>
+            <a class="btn" style="background:#1dbf73;color:#fff" href="https://www.fiverr.com/" target="_blank">Fiverr</a>
+          </div>
+
+          <div class="card" style="margin-top:18px">
+            <strong>Quick Services</strong>
+            <div class="services" style="margin-top:10px">
+              <div class="service"><strong>Virtual Assistance</strong><div style="font-size:13px;color:var(--muted)">Email handling, calendar, CRM, client follow-ups.</div></div>
+              <div class="service"><strong>Data Entry</strong><div style="font-size:13px;color:var(--muted)">PDF to Excel, copy-paste, data cleanup.</div></div>
+              <div class="service"><strong>Web Scraping</strong><div style="font-size:13px;color:var(--muted)">Structured data extraction, CSV/Excel delivery.</div></div>
+              <div class="service"><strong>Product Listing</strong><div style="font-size:13px;color:var(--muted)">Amazon, Shopify, eBay listings.</div></div>
+              <div class="service"><strong>Excel & Sheets</strong><div style="font-size:13px;color:var(--muted)">Formulas, dashboards, automation.</div></div>
+              <div class="service"><strong>Automation</strong><div style="font-size:13px;color:var(--muted)">Macros, scripts, workflow improvements.</div></div>
+            </div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <h3 style="margin:0">Contact & Availability</h3>
+            <p style="color:var(--muted);font-size:13px;margin-top:6px">Timezone: IST (UTC+05:30) • Responds within 12–24 hours</p>
+            <div style="margin-top:8px">
+              <strong>Email</strong>
+              <div style="font-size:13px;color:var(--muted)">your.email@example.com</div>
+              <strong style="margin-top:10px;display:block">Phone / WhatsApp</strong>
+              <div style="font-size:13px;color:var(--muted)">+91 00000 00000</div>
+            </div>
+            <div style="margin-top:12px" class="flex">
+              <a class="btn btn-primary" href="#contact">Get Quote</a>
+              <a class="btn btn-ghost" href="#testimonials">Reviews</a>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:12px">
+            <h4 style="margin:0">Pricing (starting)</h4>
+            <div class="price-grid" style="margin-top:8px">
+              <div class="card plan">
+                <strong>Basic</strong>
+                <div style="font-size:13px;color:var(--muted)">$10 — 5 hours / small tasks</div>
+              </div>
+              <div class="card plan">
+                <strong>Pro</strong>
+                <div style="font-size:13px;color:var(--muted)">$80 — 40 hours / month</div>
+              </div>
+              <div class="card plan">
+                <strong>Custom</strong>
+                <div style="font-size:13px;color:var(--muted)">Custom pricing for projects</div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" style="margin-top:28px">
+        <div class="card">
+          <h2>About Me</h2>
+          <p style="color:var(--muted)">Hi, I’m <strong>Mukesh Kumar Shah</strong>. Since 2019 I’ve helped small and medium businesses automate routine work, keep data accurate, and manage daily operations. I pride myself on delivering precise work with clear communication and fast turnaround times.</p>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" style="margin-top:18px">
+        <h2>Services</h2>
+        <div class="card">
+          <ul style="margin:0;padding-left:18px;color:var(--muted)">
+            <li><strong>Virtual Assistance:</strong> Inbox & calendar management, client communication, CRM updates.</li>
+            <li><strong>Data Entry:</strong> Accurate data entry, conversion, data validation.</li>
+            <li><strong>Web Scraping:</strong> Custom scraping, data cleaning, Excel/CSV delivery.</li>
+            <li><strong>Product Listing:</strong> Optimized titles, descriptions, images, SEO tags for marketplaces.</li>
+            <li><strong>Excel & Google Sheets:</strong> Templates, formulas, dashboards, automation scripts.</li>
+            <li><strong>Workflow Automation:</strong> Macros, Zapier-style processes, repetitive task automation.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section id="portfolio" style="margin-top:18px">
+        <h2>Portfolio / Sample Work</h2>
+        <div class="portfolio-grid">
+          <div class="portfolio-item card">
+            <strong>Amazon Product Listings</strong>
+            <div style="font-size:13px;color:var(--muted)">50+ product listings with keyword-optimized titles and bullet points.</div>
+          </div>
+          <div class="portfolio-item card">
+            <strong>Web Scraping - Leads</strong>
+            <div style="font-size:13px;color:var(--muted)">Collected 5,000+ qualified leads for client outreach (CSV/Excel).</div>
+          </div>
+          <div class="portfolio-item card">
+            <strong>Excel Dashboard</strong>
+            <div style="font-size:13px;color:var(--muted)">Sales dashboard with pivot tables, charts & conditional formatting.</div>
+          </div>
+          <div class="portfolio-item card">
+            <strong>PDF → Excel Conversion</strong>
+            <div style="font-size:13px;color:var(--muted)">Accurate, formatted spreadsheets from scanned PDFs and images.</div>
+          </div>
+          <div class="portfolio-item card">
+            <strong>Shopify Product Upload</strong>
+            <div style="font-size:13px;color:var(--muted)">Bulk uploads with tags, collections & SEO descriptions.</div>
+          </div>
+          <div class="portfolio-item card">
+            <strong>Automation Script</strong>
+            <div style="font-size:13px;color:var(--muted)">Macro to automate repetitive formatting & report generation.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section id="testimonials" style="margin-top:18px">
+        <h2>Client Reviews</h2>
+        <div class="card">
+          <div class="review">
+            <strong>"Highly reliable and detail-oriented — 5/5"</strong>
+            <div style="font-size:13px;color:var(--muted)">— Client on Upwork</div>
+          </div>
+          <div class="review" style="margin-top:8px">
+            <strong>"Delivered quality data quickly and communicated throughout."</strong>
+            <div style="font-size:13px;color:var(--muted)">— Fiverr client</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section id="pricing" style="margin-top:18px">
+        <h2>Pricing Plans</h2>
+        <div class="card">
+          <div class="price-grid">
+            <div class="plan card">
+              <strong>Basic</strong>
+              <div style="font-size:13px;color:var(--muted)">$10 — Small tasks (5 hours)</div>
+              <ul style="font-size:13px;color:var(--muted)"><li>Data entry up to 200 rows</li><li>Simple product uploads</li></ul>
+            </div>
+            <div class="plan card">
+              <strong>Pro</strong>
+              <div style="font-size:13px;color:var(--muted)">$80 — 40 hours / month</div>
+              <ul style="font-size:13px;color:var(--muted)"><li>Priority support</li><li>Weekly reports</li></ul>
+            </div>
+            <div class="plan card">
+              <strong>Custom</strong>
+              <div style="font-size:13px;color:var(--muted)">Custom quoting for projects</div>
+              <ul style="font-size:13px;color:var(--muted)"><li>One-time projects</li><li>Long-term engagements</li></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" style="margin-top:18px">
+        <h2>FAQ</h2>
+        <div class="card">
+          <div class="faq-item"><strong>How do I share files?</strong><div style="color:var(--muted);font-size:13px">Use Google Drive, Dropbox, or attach files via Fiverr/Upwork message.</div></div>
+          <div class="faq-item"><strong>How long do tasks take?</strong><div style="color:var(--muted);font-size:13px">Small tasks: 24–48 hours. Larger projects: depends on scope; will share ETA upon quoting.</div></div>
+          <div class="faq-item"><strong>How do you ensure data privacy?</strong><div style="color:var(--muted);font-size:13px">I follow secure sharing practices and can sign an NDA for sensitive projects.</div></div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" style="margin-top:18px">
+        <h2>Contact</h2>
+        <div class="card contact-form">
+          <form action="mailto:your.email@example.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Your email" required>
+            <input type="text" name="project" placeholder="Project title / short description">
+            <textarea name="message" rows="4" placeholder="Describe your project and requirements"></textarea>
+            <div style="display:flex;gap:10px;align-items:center">
+              <button class="btn btn-primary" type="submit">Send Message</button>
+              <a class="btn btn-ghost" href="mailto:your.email@example.com">Email Me</a>
+            </div>
+          </form>
+
+          <div style="margin-top:12px;color:var(--muted);font-size:13px">
+            Or book a call: <a href="#" style="color:var(--accent)">Schedule (add calendly link)</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© {YEAR} Mukesh Kumar Shah — Virtual Assistant & Data Management Specialist</div>
+      <div style="margin-top:6px;color:var(--muted);font-size:13px">Links: <a href="https://www.upwork.com/">Upwork</a> • <a href="https://www.fiverr.com/">Fiverr</a> • <a href="#contact">Contact</a></div>
+    </footer>
+  </div>
+
+  <script>
+    // set current year
+    document.body.innerHTML = document.body.innerHTML.replace('{YEAR}', new Date().getFullYear());
+    const themeSelect = document.getElementById('theme');
+    themeSelect.addEventListener('change', (e)=>{
+      const v = e.target.value;
+      if(v === 'minimal') document.body.setAttribute('data-theme','');
+      else if(v === 'blue'){
+        document.body.setAttribute('data-theme','');
+        document.documentElement.style.setProperty('--bg','#f8fbff');
+        document.documentElement.style.setProperty('--fg','#0b1220');
+        document.documentElement.style.setProperty('--muted','#6b7280');
+        document.documentElement.style.setProperty('--accent','#2563eb');
+        document.documentElement.style.setProperty('--card','#ffffff');
+      } else if(v === 'dark') document.body.setAttribute('data-theme','dark');
+      else if(v === 'gradient') document.body.setAttribute('data-theme','gradient');
+      else if(v === 'oatly') document.body.setAttribute('data-theme','oatly');
+    });
+
+    // smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        const t = document.querySelector(this.getAttribute('href'));
+        if(t) t.scrollIntoView({behavior:'smooth', block:'start'});
+      })
+    });
+  </script>
+</body>
+</html>
