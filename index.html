@@ -250,48 +250,50 @@
 <section id="contact" style="margin-top:18px">
   <h2>Contact</h2>
   <div class="card contact-form">
-    <form id="contactForm">
-      <input type="text" name="name" placeholder="Your name" required>
-      <input type="email" name="email" placeholder="Your email" required>
-      <input type="text" name="project" placeholder="Project title / short description">
-      <textarea name="message" rows="4" placeholder="Describe your project and requirements"></textarea>
+    <form id="whatsappForm">
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+      <input type="email" id="email" name="email" placeholder="Your email" required>
+      <input type="text" id="project" name="project" placeholder="Project title / short description">
+      <textarea id="message" name="message" rows="4" placeholder="Describe your project and requirements"></textarea>
       <div style="display:flex;gap:10px;align-items:center">
-        <button class="btn btn-primary" type="submit">Send Message</button>
+        <button class="btn btn-primary" type="submit">Send via WhatsApp</button>
+        <a class="btn btn-ghost" href="https://wa.me/919706707911" target="_blank">Open WhatsApp</a>
       </div>
     </form>
+    <div style="margin-top:12px;color:var(--muted);font-size:13px">
+      Or book a call: <a href="https://www.upwork.com/services/consultation/consulting-hr-mukesh-1993624780949427883" style="color:var(--accent)">Schedule a call </a>
+    </div>
   </div>
 </section>
 
 <script>
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // prevent form submission
+  const form = document.getElementById('whatsappForm');
+  const whatsappNumber = "919706707911"; // Your WhatsApp number
 
-    const name = this.name.value;
-    const email = this.email.value;
-    const project = this.project.value;
-    const message = this.message.value;
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent page reload
 
-    // Create WhatsApp message
-    const fullMessage = `Hello! My name is ${name} (${email}).\nProject: ${project}\nMessage: ${message}`;
+    // Get form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const project = document.getElementById('project').value;
+    const message = document.getElementById('message').value;
+
+    // Build WhatsApp message
+    let whatsappMessage = `Hello Mukesh, I received a new message from your website:\n\n`;
+    whatsappMessage += `Name: ${name}\n`;
+    whatsappMessage += `Email: ${email}\n`;
+    if(project) whatsappMessage += `Project: ${project}\n`;
+    whatsappMessage += `Message: ${message}`;
 
     // Encode message for URL
-    const encodedMessage = encodeURIComponent(fullMessage);
+    const encodedMessage = encodeURIComponent(whatsappMessage);
 
-    // Replace with your WhatsApp number including country code, no '+' sign
-    const waNumber = '919706707911';
-    const waLink = `https://wa.me/${waNumber}?text=${encodedMessage}`;
-
-    // Open WhatsApp in new tab
-    window.open(waLink, '_blank');
-});
+    // Open WhatsApp Web or App
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
+  });
 </script>
 
-
-          <div style="margin-top:12px;color:var(--muted);font-size:13px">
-            Or book a call: <a href="https://www.upwork.com/services/consultation/consulting-hr-mukesh-1993624780949427883" style="color:var(--accent)">Schedule a call </a>
-          </div>
-        </div>
-      </section>
 
     </main>
 
@@ -331,6 +333,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   </script>
 </body>
 </html>
+
 
 
 
