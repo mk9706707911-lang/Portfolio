@@ -299,18 +299,40 @@
       <section id="contact" style="margin-top:18px">
         <h2>Contact</h2>
         <div class="card contact-form">
-  <form onsubmit="return false;">
-    <input type="text" name="name" placeholder="Your name" required>
-    <input type="email" name="email" placeholder="Your email" required>
-    <input type="text" name="project" placeholder="Project title / short description">
-    <textarea name="message" rows="4" placeholder="Describe your project and requirements"></textarea>
-    
+  <form id="contactForm">
+    <input type="text" id="name" placeholder="Your name" required>
+    <input type="email" id="email" placeholder="Your email" required>
+    <input type="text" id="project" placeholder="Project title / short description">
+    <textarea id="message" rows="4" placeholder="Describe your project and requirements"></textarea>
+
     <div style="display:flex;gap:10px;align-items:center">
-      <a class="btn btn-primary" href="mailto:mk9706707911@gmail.com">Send Message</a>
-      <a class="btn btn-ghost" href="mailto:mk9706707911@gmail.com">Email Me</a>
+      <button class="btn btn-primary" type="button" onclick="sendMail()">Send Message</button>
+  
     </div>
   </form>
 </div>
+
+<script>
+function sendMail() {
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const project = document.getElementById("project").value;
+  const message = document.getElementById("message").value;
+
+  const mailTo = `mailto:mk9706707911@gmail.com
+?subject=${encodeURIComponent("New Project Inquiry: " + project)}
+&body=${encodeURIComponent(
+`Name: ${name}
+Email: ${email}
+Project: ${project}
+Message:
+${message}`
+)}`;
+
+  window.location.href = mailTo;
+}
+</script>
+
 
           <div style="margin-top:12px;color:var(--muted);font-size:13px">
             Or book a call: <a href="https://www.upwork.com/services/consultation/consulting-hr-mukesh-1993624780949427883" style="color:var(--accent)">Schedule a call </a>
@@ -357,6 +379,7 @@
   </script>
 </body>
 </html>
+
 
 
 
